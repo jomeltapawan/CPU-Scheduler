@@ -53,7 +53,11 @@ extern "C" void schedule() {
                     burst_window = t->burst;
                 }
 
+                // Running the task
                 cout << "Process " << t->name << " ran for " << burst_window << " ms. \n";
+
+                //Subtracts the time that the task was run
+                t->burst -= burst_window;
             }
         }
     }
